@@ -9,12 +9,12 @@ const valentineSchema = new mongoose.Schema({
     images: {
         type: [String], // Array of Base64 strings
         required: true,
-        validate: [arrayLimit, "{PATH} must exceed 9 images"],
+        validate: [arrayLimit, "{PATH} exceeds the limit of 9"],
     },
     createdAt: {
         type: Date,
         default: Date.now,
-        expires: "30d", // Auto-delete after 30 days
+        expires: 21600, // 6 hours in seconds (6 * 60 * 60)
     },
 });
 

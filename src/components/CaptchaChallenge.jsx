@@ -6,7 +6,6 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
     const [selected, setSelected] = useState(new Set());
     const [error, setError] = useState(false);
 
-    // Total 9 images, all should be "correct"
     const imageIndices = Array.from({ length: 9 }, (_, i) => i);
 
     const toggleSelection = (index) => {
@@ -34,7 +33,6 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
             animate={{ scale: 1, opacity: 1 }}
             className="bg-white p-4 rounded-lg shadow-xl max-w-sm w-full border border-pink-200"
         >
-            {/* Header */}
             <div
                 className="bg-blue-500 text-white p-4 -mx-4 -mt-4 rounded-t-lg mb-2 flex justify-between items-start"
                 style={{ backgroundColor: "#ff3366" }}
@@ -43,16 +41,13 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
                     <h2 className="font-bold text-lg">
                         Select all images with
                     </h2>
-                    <h1 className="font-bold text-2xl">
-                        {senderName || "your valentine"}
-                    </h1>
+                    <h1 className="font-bold text-2xl">your valentine</h1>
                     <p className="text-xs opacity-90 mt-1">
                         Click verify once there are none left.
                     </p>
                 </div>
-                <div className="bg-white/20 p-2 rounded">
-                    {/* Seal Icon */}
-                    <div className="w-14 h-14 bg-white/90 rounded flex items-center justify-center shadow-sm overflow-hidden">
+                <div className="p-2 rounded">
+                    <div className="w-14 h-14  rounded flex items-center justify-center overflow-hidden">
                         <img
                             src="/seal.png"
                             alt="seal"
@@ -62,7 +57,6 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
                 </div>
             </div>
 
-            {/* Grid */}
             <div className="grid grid-cols-3 gap-1 mb-2">
                 {imageIndices.map((index) => (
                     <div
@@ -70,14 +64,12 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
                         className="relative cursor-pointer aspect-square bg-gray-100 overflow-hidden"
                         onClick={() => toggleSelection(index)}
                     >
-                        {/* User Photo */}
                         <img
                             src={images[index]}
                             alt="Valentine"
                             className={`w-full h-full object-cover transition-transform duration-200 ${selected.has(index) ? "scale-90" : "scale-100"}`}
                         />
 
-                        {/* Selection Checkmark Overlay */}
                         {selected.has(index) && (
                             <div className="absolute top-1 left-1 w-6 h-6 bg-pink-500 rounded-full border-2 border-white flex items-center justify-center shadow-sm z-10">
                                 <svg
@@ -99,7 +91,6 @@ const CaptchaChallenge = ({ onVerify, images, senderName }) => {
                 ))}
             </div>
 
-            {/* Footer / Controls */}
             <div className="flex justify-between items-center mt-4 text-gray-500">
                 <div className="flex space-x-4">
                     <button className="hover:text-pink-600 transition-colors">

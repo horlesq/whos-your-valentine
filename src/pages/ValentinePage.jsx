@@ -16,7 +16,6 @@ const ValentinePage = () => {
     useEffect(() => {
         const fetchValentine = async () => {
             try {
-                // PROD: `/.netlify/functions/get-valentine?id=${id}`
                 const endpoint = `/.netlify/functions/get-valentine?id=${id}`;
                 const response = await axios.get(endpoint);
                 setValentineData(response.data);
@@ -62,7 +61,6 @@ const ValentinePage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-pink-200 via-pink-300 to-rose-300 relative overflow-hidden">
-            {/* Background Hearts Pattern */}
             <div className="absolute inset-0 pointer-events-none opacity-20">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

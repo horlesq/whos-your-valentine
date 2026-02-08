@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const connectToDatabase = require("./utils/db");
-const Valentine = require("./models/Valentine.js");
+const connectToDatabase = require("./utils/db.cjs");
+const Valentine = require("./models/Valentine.cjs");
 
 exports.handler = async (event, context) => {
     context.callbackWaitsForEmptyEventLoop = false;
