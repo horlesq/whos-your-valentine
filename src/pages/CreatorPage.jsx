@@ -13,10 +13,10 @@ const imageConfig = {
 };
 
 const CreatorPage = () => {
-  const [images, setImages] = useState([]);
-  const [isUploading, setIsUploading] = useState(false);
-  const [generatedLink, setGeneratedLink] = useState(null);
-  const [copySuccess, setCopySuccess] = useState(false);
+    const [images, setImages] = useState([]);
+    const [isUploading, setIsUploading] = useState(false);
+    const [generatedLink, setGeneratedLink] = useState(null);
+    const [copySuccess, setCopySuccess] = useState(false);
     const handleImageUpload = async (e) => {
         const files = Array.from(e.target.files);
 
@@ -104,6 +104,10 @@ const CreatorPage = () => {
                 <div className="p-6 md:p-8 space-y-8">
                     <div className="space-y-4">
                         <div className="flex justify-between items-center">
+                            <label className="block text-sm font-medium text-gray-700">
+                                Upload 9 photos of yourself to create the game:
+                                ({images.length}/9)
+                            </label>
                             {images.length < 9 && (
                                 <label className="cursor-pointer bg-pink-50 hover:bg-pink-100 text-pink-600 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2">
                                     <Upload size={16} />
