@@ -2,6 +2,7 @@
 
 A cute, interactive, and customizable Valentine's Day asking app. Instead of a boring question, make your valentine prove they know you by selecting all the photos of you!
 
+<video src="public/screen-rec.mp4" controls></video>
 
 ## Features
 
@@ -57,10 +58,10 @@ A cute, interactive, and customizable Valentine's Day asking app. Instead of a b
 
 This project is configured for **Netlify**.
 
-1.  Push your code to GitHub.
-2.  Import the project into Netlify.
-3.  Add your `MONGODB_URI` to Netlify's **Environment Variables**.
-4.  Deploy!
+1. Push your code to GitHub.
+2. Import the project into Netlify.
+3. Add your `MONGODB_URI` to Netlify's **Environment Variables**.
+4. Deploy!
 
 ## Privacy & Data
 
@@ -77,9 +78,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 For any inquiries or feedback, feel free to reach out via:
 
--   GitHub: [Horlesq](https://github.com/horlesq)
--   Linkedin: [Adrian Horlescu](https://www.linkedin.com/in/adrian-horlescu/)
--   Website: [horly.dev](https://horly.dev)
+- GitHub: [Horlesq](https://github.com/horlesq)
+- Linkedin: [Adrian Horlescu](https://www.linkedin.com/in/adrian-horlescu/)
+- Website: [horly.dev](https://horly.dev)
 
 ---
 
