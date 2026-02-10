@@ -2,7 +2,7 @@
 
 A cute, interactive, and customizable Valentine's Day asking app. Instead of a boring question, make your valentine prove they know you by selecting all the photos of you!
 
-<video src="public/screen-rec.mp4" controls></video>
+<video src="public/screen-rec.webm" controls></video>
 
 ## Features
 
